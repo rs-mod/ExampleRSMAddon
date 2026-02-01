@@ -9,7 +9,7 @@ jobs:
       - name: Checkout rsm
         uses: actions/checkout@v4
         with:
-          repository: ricedotwho/rsmodern
+          repository: ../rsmodern
           token: ${{ secrets.GITHUB_TOKEN }}
           path: rsmodern
 
