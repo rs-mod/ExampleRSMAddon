@@ -2,7 +2,7 @@ package com.example.module.impl;
 
 import com.ricedotwho.rsm.data.Colour;
 import com.ricedotwho.rsm.data.Keybind;
-import com.ricedotwho.rsm.event.annotations.SubscribeEvent;
+import com.ricedotwho.rsm.event.api.SubscribeEvent;
 import com.ricedotwho.rsm.event.impl.render.Render2DEvent;
 import com.ricedotwho.rsm.module.Module;
 import com.ricedotwho.rsm.module.api.Category;
@@ -75,9 +75,9 @@ public class Example extends Module {
     public void onRender2D(Render2DEvent event) {
         // translates and scales the content
         this.dragSetting.renderScaled(event.getGfx(),
-                () -> NVGUtils.drawText( "hello", 0, 0, 25f, Colour.WHITE, NVGUtils.JOSEFIN),
-                NVGUtils.getTextWidth("hello", 25f, NVGUtils.JOSEFIN), // this isn't ideal, but I cba finding out what the width would be rn
-                NVGUtils.getTextHeight(25f, NVGUtils.JOSEFIN)
+                () -> NVGUtils.drawText("hello", 0, 0, 25f, Colour.WHITE, NVGUtils.JOSEFIN),
+                60, // idk what the real dims should be
+                30
         );
     }
 }
