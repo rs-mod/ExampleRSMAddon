@@ -7,6 +7,8 @@ import com.ricedotwho.rsm.event.impl.render.Render2DEvent;
 import com.ricedotwho.rsm.module.Module;
 import com.ricedotwho.rsm.module.api.Category;
 import com.ricedotwho.rsm.module.api.ModuleInfo;
+import com.ricedotwho.rsm.ui.clickgui.settings.group.DefaultGroupSetting;
+import com.ricedotwho.rsm.ui.clickgui.settings.group.GroupSetting;
 import com.ricedotwho.rsm.ui.clickgui.settings.impl.*;
 import com.ricedotwho.rsm.utils.ChatUtils;
 import com.ricedotwho.rsm.utils.render.render2d.NVGUtils;
@@ -33,7 +35,7 @@ public class Example extends Module {
     private final NumberSetting numberSetting = new NumberSetting("Number", 0, 100, 67, 1);
     private final StringSetting stringSetting = new StringSetting("String", "A String Setting");
 
-    private final GroupSetting groupSetting = new GroupSetting("Group 2");
+    private final DefaultGroupSetting groupSetting = new DefaultGroupSetting("Group 2", this);
     private final BooleanSetting booleanSetting2 = new BooleanSetting("Boolean 2", false);
 
     private final DragSetting dragSetting = new DragSetting("A Gui Element", new Vector2d(10, 10), new Vector2d(50, 15));
