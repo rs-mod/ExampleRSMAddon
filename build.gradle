@@ -31,7 +31,7 @@ dependencies {
     def lwjglVersion = property("minecraft_lwjgl_version")
     compileOnly "org.lwjgl:lwjgl-nanovg:$lwjglVersion"
 
-    compileOnly"com.ricedotwho:rsm:1.0.0"
+    compileOnly"com.ricedotwho:rsm:${project.rsm_version}"
 
     annotationProcessor "org.projectlombok:lombok:1.18.32"
     compileOnly "org.projectlombok:lombok:1.18.32"

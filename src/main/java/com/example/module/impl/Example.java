@@ -29,6 +29,7 @@ public class Example extends Module {
     private final ColourSetting colourSetting = new ColourSetting("Colour", new Colour(-1));
     private final KeybindSetting keybindSetting = new KeybindSetting("Keybind", new Keybind(GLFW.GLFW_KEY_6, false, () -> {
         ChatUtils.chat("woah that keybind did something");
+        return false;
     }));
     private final ModeSetting modeSetting = new ModeSetting("Mode", "Item 1", Arrays.asList("Item 1", "Item 2", "Item 3"));
     private final MultiBoolSetting multiBoolSetting = new MultiBoolSetting("MultiBool", Arrays.asList("Option 1", "Option 2", "Option 3"), Arrays.asList("Option 1", "Option 3"));
